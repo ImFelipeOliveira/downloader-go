@@ -1,7 +1,7 @@
 package main
 
 import (
-	"downloader-go/cmd"
+	"downloader-go/downloader/cmd"
 )
 
 func main() {
