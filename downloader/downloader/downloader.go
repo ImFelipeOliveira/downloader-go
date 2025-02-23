@@ -1,6 +1,7 @@
 package downloader
 
 import (
+	"downloader-go/downloader/utils"
 	"fmt"
 	"io"
 	"net/http"
@@ -23,7 +24,15 @@ func DownloadFiles(url string) error {
 	}
 	filename := path.Base(url)
 
-	out, err := os.Create(filename)
+	downloadsPath, err := utils.SetDownloadPath()
+	if err != nil {
+		return err
+	}
+
+	filePath := path.Join(downloadsPath, filename)
+
+	out, err := os.Create(filePath)
+
 	if err != nil {
 		return fmt.Errorf("error creating file %s: %v", filename, err)
 	}
