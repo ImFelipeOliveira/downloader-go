@@ -10,7 +10,7 @@ Downloader-go is a simple command-line tool written in Go for downloading files 
 
 ## Requirements
 
-- Go 1.18+ (for building the project)
+- Go 1.24+ (for building the project)
 - Access to a terminal/command prompt
 
 ## Installation
